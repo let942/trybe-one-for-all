@@ -10,7 +10,7 @@ nome VARCHAR (50) NOT NULL
 CREATE TABLE SpotifyClone.plan(
 id INT PRIMARY KEY AUTO_INCREMENT,
 plan_name VARCHAR(50) NOT NULL,
-price INT NOT NULL
+price DECIMAL(4, 2) NOT NULL
 );
 
 CREATE TABLE SpotifyClone.users(
@@ -62,10 +62,10 @@ FOREIGN KEY (id_music) REFERENCES music(id)
 
 INSERT INTO SpotifyClone.plan (plan_name, price )
 VALUES
-('gratuito', 0),
-('familiar', 799),
-('universitario', 599),
-('pessoal', 699);
+('gratuito', 0.00),
+('familiar', 7.99),
+('universitario', 5.99),
+('pessoal', 6.99);
 
 INSERT INTO SpotifyClone.users (user_name, age, user_plan, inscription_date )
 VALUES
